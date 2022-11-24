@@ -1,0 +1,30 @@
+<form action="searchAwayTrips" method="POST">
+    <select name="distance" id="distance">
+        <option value="">Jusqu'où souhaitez-vous envoyer votre belle-mère</option>
+        <option value="zero">De 0 à 1000 km</option>
+        <option value="1000">De 1000 à 5000km</option>
+        <option value="5000">Plus de 5000km</option>
+    </select>
+    <br>
+    <select name="duration" id="duration">
+        <option value="">Quelle durée ?</option>
+        <option value="Une semaine">Une semaine</option>
+        <option value="Deux semaines">Deux semaines</option>
+        <option value="Un mois">Un mois</option>
+    </select>
+    <br>
+    <select name="network" id="network">
+        <option value="">Votre belle-mère pourra-t-elle vous contacter ?</option>
+        <option value="oui">Oui, soyons résonnable</option>
+        <option value="non">Surtout pas !</option>
+    </select>
+    <br>
+    <button type="submit">Rechercher</button>
+</form>
+{% for trip in trips %}
+    {{ trip.trip_name }}
+{% endfor %}
+{{ noTrip }}
+{% for error in errors %}
+    {{ error }}
+{% endfor %}

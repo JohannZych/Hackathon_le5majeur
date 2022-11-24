@@ -30,4 +30,4 @@ CREATE TABLE trip (
 );
 
 ALTER TABLE stepmom ADD CONSTRAINT fk_user_stepmom FOREIGN KEY(userID)
-    REFERENCES User (id);
+    REFERENCES user (id);

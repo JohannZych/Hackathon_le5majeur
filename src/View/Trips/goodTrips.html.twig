@@ -1,0 +1,30 @@
+<form action="searchGoodTrips" method="POST">
+    <select name="continent" id="continent">
+        <option value="">Choisissez un continent de destination</option>
+        <option value="Europe">Europe</option>
+        <option value="America">Amérique</option>
+        <option value="Asia">Asie</option>
+    </select>
+    <br>
+    <select name="type" id="type">
+        <option value="">Quel type de voyage ?</option>
+        <option value="Sportif">Sportif</option>
+        <option value="Découverte dune culture">Découverte d'une culture</option>
+        <option value="Visite dune capitale">Visite d'une capitale</option>
+    </select>
+    <br>
+    <select name="duration" id="continent">
+        <option value="">Quelle durée ?</option>
+        <option value="Une semaine">Une semaine</option>
+        <option value="Deux semaines">Deux semaines</option>
+        <option value="Un mois">Un mois</option>
+    </select>
+    <button type="submit">Rechercher</button>
+</form>
+{% for trip in trips %}
+    {{ trip.trip_name }}
+{% endfor %}
+{{ noTrip }}
+{% for error in errors %}
+    {{ error }}
+{% endfor %}
