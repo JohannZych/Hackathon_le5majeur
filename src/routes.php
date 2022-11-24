@@ -14,5 +14,6 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'connection' => ['UserConnectionController', 'login'],
-    'inscription' => ['UserInscriptionController', 'register']
+    'modifyUser' => ['ModifyUserProfilController', 'modifyUserInfos'],
+    'inscription' => ['UserInscriptionController', 'register'],
 ];
