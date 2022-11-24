@@ -1,4 +1,4 @@
-.nav-bar {
+.nav-bar1 {
     background-image: linear-gradient(black, silver);
     width : 100vw;
     height: 9rem;
@@ -6,11 +6,7 @@
     margin: 0;
     display: flex;
     justify-content: space-between;
-    position: fixed;
-    z-index: 10;
     top : 0;
-
-
 }
 .nav-bar-block{
     display: flex;
@@ -32,7 +28,7 @@
     border-radius: 50%;
 }
 
-.nav-bar-subscribe {
+.nav-bar-register {
     margin-right: 2rem;
     font-weight: bold;
     font-size: 2rem;
