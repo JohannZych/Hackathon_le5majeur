@@ -1,14 +1,158 @@
 .trip-choice-display  {
     display: flex;
-    margin-top: 20rem;
+    margin-top: 1rem;
+
 }
 
-.one-trip {
+.first-trip {
     width: 80%;
     margin:3rem;
-    background-color: antiquewhite;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px dimgray;
+    background: rgba(26, 87, 159, .7);
+
+}
+
+.first-trip:hover {
+    width : 82%;
+    padding: 1.5rem;
+    margin : 2rem;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+    box-shadow: 5px 5px 5px gray, -5px -5px 5px gray;
 }
 .trip-choice_img {
-    width: 33rem;
+    width: 30rem;
     height: 25rem;
+    border-radius: 0.5rem;
+    margin : 0.5rem;
+}
+
+.trip-choice-title {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+}
+
+.trip-choice-text {
+    margin :1rem;
+}
+
+.trip1-choice-button {
+    margin-left : 6.5rem;
+    margin-right: 6.5rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    background-color: #eeeeee;
+    border-radius: 2rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+
+}
+
+.trip1-choice-button:hover {
+    color: white;
+    background-color: #1A579F;
+    box-shadow: 2px 2px 5px dimgray, -2px -2px 5px dimgray;
+}
+
+.trip2-choice-button {
+    margin-left : 6.5rem;
+    margin-right: 6.5rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    background-color: #eeeeee;
+    border-radius: 2rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+
+}
+
+.trip2-choice-button:hover {
+    color: white;
+    background-color: #12B556;
+    box-shadow: 2px 2px 5px dimgray, -2px -2px 5px dimgray;
+}
+
+.trip3-choice-button {
+    margin-left : 6.5rem;
+    margin-right: 6.5rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    background-color: #eeeeee;
+    border-radius: 2rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+
+}
+
+.trip3-choice-button:hover {
+    color: white;
+    background-color: #A8120E;
+    box-shadow: 2px 2px 5px dimgray, -2px -2px 5px dimgray;
+}
+
+
+.second-trip {
+    width: 80%;
+    margin:3rem;
+    background: rgba(18, 181, 86, .7);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px dimgray;
+
+}
+.second-trip:hover {
+    width : 82%;
+    padding: 1.5rem;
+    margin : 2rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    box-shadow: 5px 5px 5px gray, -5px -5px 5px gray;
+}
+
+.third-trip {
+    width: 80%;
+    margin:3rem;
+    background: rgba(168, 18, 14, .7);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px dimgray;
+
+}
+.third-trip:hover {
+    width : 82%;
+    padding: 1.5rem;
+    margin : 2rem;
+    margin-left: 2.5rem;
+    box-shadow: 5px 5px 5px gray, -5px -5px 5px gray;
+}
+
+.trip-choice-button-div {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    margin-left: 2.5rem;
+}
+
+.homepage-user-title {
+    text-align: center;
 }
