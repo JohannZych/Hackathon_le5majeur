@@ -15,7 +15,7 @@ CREATE TABLE stepmom (
                          userID INT NOT NULL,
                          lastname VARCHAR(255) NOT NULL,
                          firstname VARCHAR(255) NOT NULL,
-                         age INT NOT NULL
+                         birthday DATE NOT NULL
 );
 
 CREATE TABLE trip (
@@ -26,7 +26,7 @@ CREATE TABLE trip (
                       continent VARCHAR(50) NOT NULL,
                       type VARCHAR(255),
                       duration VARCHAR(255),
-                      network_coverage BOOL,
+                      network_coverage VARCHAR(3),
                       distance INT
 );
 

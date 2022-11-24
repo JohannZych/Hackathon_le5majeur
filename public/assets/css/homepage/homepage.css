@@ -1,0 +1,110 @@
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100rem;
+    max-height: 50rem;
+    position: relative;
+    margin-top: 2rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+
+
+
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade-content {
+    animation-name: fade-content;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade-content {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.homepage-img {
+    width: 100rem;
+    height: 30rem;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+}
+
+
+.first-article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first-article-text {
+    margin: 5rem;
+}
+
+.article-img {
+    margin: 5rem;
+    border-radius: 100px;
+    box-shadow: 2px 2px 5px black;
+   }
+
+.articles-section {
+    width: 85%;
+    margin: auto;
+}
+
+.article-title {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.homepage-title {
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 12rem;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.article-text {
+    font-size: 1.4rem;
+}
