@@ -1,62 +1,39 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inscription">
+<button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#inscription">
     Inscription
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="inscription" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+<div class="modal fade" id="inscription" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="32767"
      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">S'inscrire</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <form>
-                        <div class="form-control">
-                            <input type="text" name="firstname" required> <label>Prénom</label>
-                        </div>
-                        <div class="form-control">
-                            <input type="text" name="lastname" required> <label>Nom</label>
-                        </div>
-                        <div class="form-control">
-                            <input type="text" name="mail" required> <label>Adresse mail</label>
-                        </div>
-                        <div class="form-control">
-                            <input type="password" name="password1" required> <label>Mot de passe</label>
-                        </div>
-                        <div class="form-control">
-                            <input type="password" name="password2" required> <label>Confirmation du mot de passe</label>
-                        </div>
-                        <button class="btn btn-form-connexion btn-light">Se connecter</button>
-                    </form>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-dark" id="staticBackdropLabel">S'inscrire</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                {#                    <div class="mb-3"> #}
-                {#                        <label for="firstname" class="form-label">Firstname</label> #}
-                {#                        <input type="text" name="firstname" id="firstname" class="form-control" placeholder="ex: Franck"> #}
-                {#                    </div> #}
-                {#                    <div class="mb-3"> #}
-                {#                        <label for="lastname" class="form-label">Lastname</label> #}
-                {#                        <input type="text" name="lastname" id="lastname" class="form-control" placeholder="ex: Hamzi"> #}
-                {#                    </div> #}
-                {#                    <div class="mb-3"> #}
-                {#                        <label for="email" class="form-label">Email address</label> #}
-                {#                        <input type="email" class="form-control" id="email" name="email" placeholder="ex: franck@example.com"> #}
-                {#                    </div> #}
-                {#                    <div class="mb-3"> #}
-                {#                        <label for="password" class="form-label">Password</label> #}
-                {#                        <input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe"> #}
-                {#                    </div> #}
-                {#                    <div class="mb-3"> #}
-                {#                        <label for="password" class="form-label">Password</label> #}
-                {#                        <input type="password" class="form-control" id="password" name="password" placeholder="Confirmer votre mot de passe"> #}
-                {#                    </div> #}
-                {#                    <div> #}
-                {#                        <input type="submit" class="btn btn-primary" value="Submit"> #}
-                {#                    </div> #}
+                <div class="modal-body">
+                    <div class="container">
+                        <form>
+                            <div class="form-control">
+                                <input type="text" name="firstname" required> <label>Prénom</label>
+                            </div>
+                            <div class="form-control">
+                                <input type="text" name="lastname" required> <label>Nom</label>
+                            </div>
+                            <div class="form-control">
+                                <input type="text" name="mail" required> <label>Adresse mail</label>
+                            </div>
+                            <div class="form-control">
+                                <input type="password" name="password1" required> <label>Mot de passe</label>
+                            </div>
+                            <div class="form-control">
+                                <input type="password" name="password2" required> <label>Confirmation du mot de passe</label>
+                            </div>
+                            <button class="btn btn-form-connexion btn-light">Se connecter</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 </div>

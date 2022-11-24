@@ -1,16 +1,16 @@
-<nav class="nav-bar">
+<nav class="nav-bar1">
 
     <div class="nav-bar-block2">
         <img src="assets/images/DALL·E 2022-11-24 16.30.10 - martine go for trip.png" class="nav-bar-img">
 
         <h2 class="nav-bar-title">martine part en voyage</h2>
-        </div>
+    </div>
     <div class="nav-bar-block">
-        <a class="nav-bar-subscribe" >
-            Inscription
-        </a>
-        <a class="nav-bar-login">
-            Login
-        </a>
+        <div class="nav-bar-register">
+            {% include 'Modal/modalInscription.html.twig' %}
+        </div>
+        <div class="nav-bar-login">
+            {% include'Modal/modalConnexion.html.twig' %}
+        </div>
     </div>
 </nav>
