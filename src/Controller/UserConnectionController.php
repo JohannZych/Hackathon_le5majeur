@@ -6,7 +6,7 @@ use App\Model\UserConnectionManager;
 
 class UserConnectionController extends AbstractController
 {
-    public function login(): string
+    public function login(): ?string
     {
         $errors = [];
         if ($_SERVER["REQUEST_METHOD"] === 'POST') {
@@ -34,10 +34,7 @@ class UserConnectionController extends AbstractController
                 }
             }
         }
-        // Generate the web page
-        return $this->twig->render('Home/connection.html.twig', [
-            'errors' => $errors
-        ]);
+        return null;
     }
 
     public function logout()
