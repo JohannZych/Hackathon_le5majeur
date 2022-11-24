@@ -10,3 +10,6 @@ body {
 main {
     margin : 1.5rem;
 }
+
+@import "animationModal.css";
+
