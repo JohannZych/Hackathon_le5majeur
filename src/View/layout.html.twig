@@ -10,11 +10,16 @@
 
     <link rel="stylesheet" href="/assets/css/style.css">
     {% block stylesheet %}{% endblock %}
+
+    <!-- CSS only -->
 </head>
 
 <body>
+    {% include 'navbar/navbar-unlog.html.twig' %}
     {% block content %}{% endblock %}
     {% block javascript %}{% endblock %}
+
+    <!-- JavaScript Bundle with Popper -->
 </body>
 </html>
 
