@@ -1,0 +1,14 @@
+.trip-choice-display  {
+    display: flex;
+    margin-top: 20rem;
+}
+
+.one-trip {
+    width: 80%;
+    margin:3rem;
+    background-color: antiquewhite;
+}
+.trip-choice_img {
+    width: 33rem;
+    height: 25rem;
+}

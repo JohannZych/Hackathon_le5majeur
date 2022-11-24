@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@800&display=swap%27');
 @import "navbar/navbar.css";
 @import 'homepage/homepage.css';
+@import "homepage/homepageLogin.css";
 
 body {
     margin: 0;
