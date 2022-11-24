@@ -1,30 +1,59 @@
-<form action="searchGoodTrips" method="POST">
-    <select name="continent" id="continent">
-        <option value="">Choisissez un continent de destination</option>
-        <option value="Europe">Europe</option>
-        <option value="America">Amérique</option>
-        <option value="Asia">Asie</option>
-    </select>
-    <br>
-    <select name="type" id="type">
-        <option value="">Quel type de voyage ?</option>
-        <option value="Sportif">Sportif</option>
-        <option value="Découverte dune culture">Découverte d'une culture</option>
-        <option value="Visite dune capitale">Visite d'une capitale</option>
-    </select>
-    <br>
-    <select name="duration" id="continent">
-        <option value="">Quelle durée ?</option>
-        <option value="Une semaine">Une semaine</option>
-        <option value="Deux semaines">Deux semaines</option>
-        <option value="Un mois">Un mois</option>
-    </select>
-    <button type="submit">Rechercher</button>
-</form>
-{% for trip in trips %}
-    {{ trip.trip_name }}
-{% endfor %}
-{{ noTrip }}
-{% for error in errors %}
-    {{ error }}
-{% endfor %}
+{% extends 'layout.html.twig' %}
+{% block content %}
+    <div class="search-trips-body-container">
+        <div class="form-container">
+            <h2>Offrez un voyage inoubliable</h2>
+            <p>Sélectionnez vos préférences de recherche, vous obtiendrez une sélection de voyages sur-mesure pour votre
+                belle-maman.</p>
+
+            <ul class="error-list">
+                {% for error in errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+            <form action="searchGoodTrips" method="POST">
+                <select name="continent" id="continent">
+                    <option value="">Choisissez un continent de destination</option>
+                    <option value="Europe">Europe</option>
+                    <option value="America">Amérique</option>
+                    <option value="Asia" {% if inputs.continent == "Asia" %} selected {% endif %}>Asie</option>
+                    <option value="Océanie">Océanie</option>
+                    <option value="Afrique">Afrique</option>
+                    <option value="Antarctique">Antarctique</option>
+                </select>
+                <br>
+                <select name="type" id="type">
+                    <option value="">Quel type de voyage ?</option>
+                    <option value="Sportif">Sportif</option>
+                    <option value="Découverte d'une culture">Découverte d'une culture</option>
+                    <option value="Visite d'une capitale">Visite d'une capitale</option>
+                </select>
+                <br>
+                <select name="duration" id="continent">
+                    <option value="">Quelle durée ?</option>
+                    <option value="Une semaine">Une semaine</option>
+                    <option value="Deux semaines" {% if inputs.duration == "Deux semaines" %} selected {% endif %}>
+                        Deux semaines
+                    </option>
+                    <option value="Un mois">Un mois</option>
+                </select>
+                <button type="submit">Rechercher</button>
+            </form>
+
+        </div>
+        <div class="all-trips-container">
+            <h3 class="result-title">Les voyages en {{ inputs.continent }} de type "{{ inputs.type }}" et d'une durée de
+                "{{ inputs.duration }}" </h3>
+            {% for trip in trips %}
+            <div class="trip-container">
+                <img src="{{ trip.image }}" class="trip-image" alt="">
+                {{ trip.trip_name }}
+                {{ trip.id }}
+                {% else %}
+                    {{ noTrip }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

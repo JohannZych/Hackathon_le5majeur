@@ -37,7 +37,8 @@ class TripController extends AbstractController
             return $this->twig->render('Trips/goodTrips.html.twig', [
                 'trips' => $trips,
                 'noTrip' => $noTripsMessage,
-                'errors' => $errors
+                'errors' => $errors,
+                'inputs' => $tripSearch
             ]);
         }
         return $this->twig->render('Trips/goodTrips.html.twig');
@@ -73,7 +74,8 @@ class TripController extends AbstractController
             return $this->twig->render('Trips/awayTrips.html.twig', [
                 'trips' => $trips,
                 'noTrip' => $noTripsMessage,
-                'errors' => $errors
+                'errors' => $errors,
+                'inputs' => $tripSearch
             ]);
         }
         return $this->twig->render('Trips/awayTrips.html.twig');

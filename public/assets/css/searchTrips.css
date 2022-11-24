@@ -1,0 +1,38 @@
+.search-trips-body-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.form-container {
+  grid-column: 0/1;
+  position: relative;
+}
+.form-container:after {
+  content: "";
+  background: black;
+  position: absolute;
+  bottom: 25%;
+  top: 25%;
+  left: 0;
+  width: 1px;
+}
+
+.all-trips-container {
+  grid-column: 2/4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trip-image {
+  height: 400px;
+  width: 770px;
+}
+
+.trip-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*# sourceMappingURL=searchTrips.css.map */
