@@ -1,9 +1,8 @@
 
 .nav-bar1 {
-    background-image: linear-gradient(black, silver);
-
+    background-color: black;
     width : 100vw;
-    height: 9rem;
+    height: 6rem;
     color: white;
     margin: 0;
     display: flex;
@@ -24,8 +23,8 @@
 
 .nav-bar-img {
     margin: 0.5rem;
-    width: 8rem;
-    height : 8rem;
+    width: 5rem;
+    height : 5rem;
     margin-left: 1rem;
     border-radius: 50%;
 }
@@ -38,11 +37,16 @@
 
 .nav-bar-title {
     color: white;
-    margin-top: 2.7rem;
-    font-size: 2.5rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
     font-family: 'Libre Franklin', sans-serif;
 }
 
 .nav-bar-block2 {
     display: flex;
+}
+
+.nav-bar-parametre {
+    width: 5rem;
+
 }
