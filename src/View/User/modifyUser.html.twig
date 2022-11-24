@@ -1,54 +1,54 @@
 {% extends 'layout.html.twig' %}
 
-{% block title %}
-    Modifier mon profil
-{% endblock %}
-
 {% block stylesheet %}
     <link rel="stylesheet" href="/assets/css/modifyUserProfil.css">
 {% endblock %}
 
 {% block content %}
     <div class="profile-container">
-        <h2 class="modify-profile-title">Modifier mon profil</h2>
         <div class="modify-form-errors">
             {% for error in errorsLogs %}
                 <li>{{ error }}</li>
             {% endfor %}
         </div>
         <form action="modifyUser" method="post" class="modify-form">
-            <div class="input-container">
-                <input class="input-delete" type="text" name="lastname" id="lastname" placeholder=" "
+            <h2 class="modify-profile-title">Modifier mon profil</h2>
+            <div class="input-container ic2">
+                <label for="lastname" class="labelModify">Nom :</label>
+                <input class="input" type="text" name="lastname" id="lastname" placeholder=" "
                        value="{{ user.lastname }}" required>
                 <div class="cut-small"></div>
-                <label for="lastname" class="placeholder">Nom :</label>
             </div>
-            <div class="input-container">
-                <input class="input-delete" type="text" name="firstname" id="firstname" placeholder=" "
+            <div class="input-container ic2">
+                <label for="firstname" class="labelModify">Prénom :</label>
+                <input class="input" type="text" name="firstname" id="firstname" placeholder=" "
                        value="{{ user.firstname }}" required>
                 <div class="cut"></div>
-                <label for="firstname" class="placeholder">Prénom :</label>
             </div>
-            <div class="input-container">
-                <input class="input-delete" type="email" name="email" id="email" placeholder=" "
+            <div class="input-container ic2">
+                <label for="email" class="labelModify">E-mail</label>
+                <input class="input" type="email" name="email" id="email" placeholder=" "
                        value="{{ user.email }}" required>
                 <div class="cut"></div>
-                <label for="email" class="placeholder">E-mail</label>
+
             </div>
-            <h2 class="modify-profile-title">Modifier ma Belle-mère</h2>
-            <div class="input-container">
-                <input class="input-delete" type="text" name="stepmomLastname" id="stepmomLastname" placeholder=" "
+            <h2 class="subtitle">Modifier ma Belle-mère</h2>
+            <div class="input-container ic2">
+                <label for="lastname" class="labelModify">Nom :</label>
+                <input class="input" type="text" name="stepmomLastname" id="stepmomLastname" placeholder=" "
                        value="{{ stepmom.lastname }}" required>
                 <div class="cut-small"></div>
-                <label for="lastname" class="placeholder">Nom :</label>
+            </div>
+            <div class="input-container ic2">
+                <label for="firstname" class="labelModify">Prénom :</label>
+                <input class="input" type="text" name="stepmomFirstname" id="stepmomFirstname" placeholder=" "
+                       value="{{ stepmom.firstname }}" required>
+                <div class="cut cut-small"></div>
             </div>
             <div class="input-container">
-                <input class="input-delete" type="text" name="stepmomFirstname" id="stepmomFirstname" placeholder=" "
-                       value="{{ stepmom.firstname }}" required>
-                <div class="cut"></div>
-                <label for="firstname" class="placeholder">Prénom :</label>
+                <button type="submit" name="submit" class="submit">Modifier mon profil</button>
+                <button type="submit" name="submit" class="submit"><a href="/">Accueil</a></button>
             </div>
-            <button type="submit" name="submit" id="submitUserInscription">Modifier mon profil</button>
         </form>
     </div>
 {% endblock %}

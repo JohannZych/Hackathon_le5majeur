@@ -1,5 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@800&display=swap%27');
+.modify-profile-title {
+    font-family: var(--fontText);
+}
 
-.modify-profile-title{
-    font-family: 'Libre Franklin', sans-serif;
+label {
+    display: none;
+}
+.profile-container {
+    align-items: center;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.modify-form {
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 500px;
+    padding: 20px;
+    width: 320px;
+}
+
+.modify-profile-title {
+    color: #eee;
+    font-family: var(--fontText);
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+.input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+}
+.ic2 {
+    margin-top: 20px;
+}
+.input {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+}
+
+.subtitle {
+    color: #eee;
+    font-family: var(--fontText);
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.cut {
+    background-color: #15172b;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;
+}
+
+.cut-small {
+    width: 50px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+}
+
+.labelModify {
+    color: #65657b;
+    font-family: var(--fontText);
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+}
+
+
+.input:focus ~ .labelModify,
+.input:not(:placeholder-shown) ~ .labelModify {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .labelModify  {
+    color: #808097;
+}
+
+.input:focus ~ .labelModify  {
+    color: #dc2f55;
+}
+
+.submit {
+    background-color: var(--softTravel);
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 48px;
+// outline: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.submit, a{
+    text-decoration: none;
+    color: white;
+}
+
+.submit:active {
+    background-color: #06b;
 }
