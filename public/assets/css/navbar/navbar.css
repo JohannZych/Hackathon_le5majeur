@@ -47,6 +47,11 @@
 }
 
 .nav-bar-parametre {
-    width: 5rem;
+    width: 3rem;
+    margin-right: 3rem;
+    margin-top: 1.5rem;
+}
 
+.nav-bar-logos {
+    display: flex;
 }
