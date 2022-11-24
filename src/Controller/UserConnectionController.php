@@ -43,4 +43,9 @@ class UserConnectionController extends AbstractController
         unset($_SESSION['user_id']);
         header('Location:/');
     }
+
+    public function showUserHomePage()
+    {
+        return $this->twig->render('Home/homeConnected.html.twig');
+    }
 }
