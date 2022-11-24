@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+    <div class="bg-image"></div>
     <div class="profile-container">
         <div class="modify-form-errors">
             {% for error in errorsLogs %}
@@ -12,38 +13,32 @@
             {% endfor %}
         </div>
         <form action="modifyUser" method="post" class="modify-form">
-            <h2 class="modify-profile-title">Modifier mon profil</h2>
+            <h2 class="modify-profile-title">Mes Infos</h2>
             <div class="input-container ic2">
-                <label for="lastname" class="labelModify">Nom :</label>
+                <label for="lastname" class="labelModify"></label>
                 <input class="input" type="text" name="lastname" id="lastname" placeholder=" "
                        value="{{ user.lastname }}" required>
-                <div class="cut-small"></div>
             </div>
             <div class="input-container ic2">
-                <label for="firstname" class="labelModify">Prénom :</label>
+                <label for="firstname" class="labelModify"></label>
                 <input class="input" type="text" name="firstname" id="firstname" placeholder=" "
                        value="{{ user.firstname }}" required>
-                <div class="cut"></div>
             </div>
             <div class="input-container ic2">
-                <label for="email" class="labelModify">E-mail</label>
+                <label for="email" class="labelModify"></label>
                 <input class="input" type="email" name="email" id="email" placeholder=" "
                        value="{{ user.email }}" required>
-                <div class="cut"></div>
-
             </div>
-            <h2 class="subtitle">Modifier ma Belle-mère</h2>
+            <h2 class="subtitle">Infos de ma Belle-mère</h2>
             <div class="input-container ic2">
-                <label for="lastname" class="labelModify">Nom :</label>
+                <label for="lastname" class="labelModify"></label>
                 <input class="input" type="text" name="stepmomLastname" id="stepmomLastname" placeholder=" "
                        value="{{ stepmom.lastname }}" required>
-                <div class="cut-small"></div>
             </div>
             <div class="input-container ic2">
-                <label for="firstname" class="labelModify">Prénom :</label>
+                <label for="firstname" class="labelModify"></label>
                 <input class="input" type="text" name="stepmomFirstname" id="stepmomFirstname" placeholder=" "
                        value="{{ stepmom.firstname }}" required>
-                <div class="cut cut-small"></div>
             </div>
             <div class="input-container">
                 <button type="submit" name="submit" class="submit">Modifier mon profil</button>
