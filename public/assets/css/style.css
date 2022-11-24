@@ -8,8 +8,14 @@ body {
 }
 
 main {
-    margin : 1.5rem;
+    margin: 1.5rem;
 }
+
 
 @import "animationModal.css";
 
+:root {
+    --mediumTravel: #12B556;
+    --softTravel: #1A579F;
+    --extremeTravel: #A8120E;
+}

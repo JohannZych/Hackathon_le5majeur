@@ -14,24 +14,24 @@
             <form action="searchGoodTrips" method="POST">
                 <select name="continent" id="continent">
                     <option value="">Choisissez un continent de destination</option>
-                    <option value="Europe">Europe</option>
-                    <option value="America">Amérique</option>
-                    <option value="Asia" {% if inputs.continent == "Asia" %} selected {% endif %}>Asie</option>
-                    <option value="Océanie">Océanie</option>
-                    <option value="Afrique">Afrique</option>
-                    <option value="Antarctique">Antarctique</option>
+                    <option value="Europe" {% if inputs.continent == "Europe" %} selected {% endif %}>Europe</option>
+                    <option value="Amérique" {% if inputs.continent == "Amérique" %} selected {% endif %}>Amérique</option>
+                    <option value="Asie" {% if inputs.continent == "Asie" %} selected {% endif %}>Asie</option>
+                    <option value="Océanie" {% if inputs.continent == "Océanie" %} selected {% endif %}>Océanie</option>
+                    <option value="Afrique" {% if inputs.continent == "Afrique" %} selected {% endif %}>Afrique</option>
+                    <option value="Antarctique" {% if inputs.continent == "Antarctique" %} selected {% endif %}>Antarctique</option>
                 </select>
                 <br>
                 <select name="type" id="type">
                     <option value="">Quel type de voyage ?</option>
-                    <option value="Sportif">Sportif</option>
-                    <option value="Découverte d'une culture">Découverte d'une culture</option>
-                    <option value="Visite d'une capitale">Visite d'une capitale</option>
+                    <option value="Sportif" {% if inputs.type == "Sportif" %} selected {% endif %}>Sportif</option>
+                    <option value="Découverte d'une culture" {% if inputs.type == "Découverte d'une culture" %} selected {% endif %}>Découverte d'une culture</option>
+                    <option value="Visite d'une capitale" {% if inputs.type == "Visite d'une capitale" %} selected {% endif %}>Visite d'une capitale</option>
                 </select>
                 <br>
                 <select name="duration" id="continent">
-                    <option value="">Quelle durée ?</option>
-                    <option value="Une semaine">Une semaine</option>
+                    <option value="" >Quelle durée ?</option>
+                    <option value="Une semaine" {% if inputs.duration == "Une semaine" %} selected {% endif %}>Une semaine</option>
                     <option value="Deux semaines" {% if inputs.duration == "Deux semaines" %} selected {% endif %}>
                         Deux semaines
                     </option>
@@ -42,15 +42,17 @@
 
         </div>
         <div class="all-trips-container">
+            {% if trips %}
             <h3 class="result-title">Les voyages en {{ inputs.continent }} de type "{{ inputs.type }}" et d'une durée de
                 "{{ inputs.duration }}" </h3>
+            {% endif %}
             {% for trip in trips %}
             <div class="trip-container">
                 <img src="{{ trip.image }}" class="trip-image" alt="">
                 {{ trip.trip_name }}
                 {{ trip.id }}
                 {% else %}
-                    {{ noTrip }}
+                    <h3>{{ noTrip }}</h3>
                 {% endfor %}
             </div>
         </div>
