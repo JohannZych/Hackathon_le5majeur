@@ -1,1 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@800&display=swap%27');
+@import "navbar/navbar.css";
+@import 'homepage/homepage.css';
+
+body {
+    margin: 0;
+    background-color: #f4fefe;
+}
+
+main {
+    margin : 1.5rem;
+}
+
 @import "animationModal.css";
+
