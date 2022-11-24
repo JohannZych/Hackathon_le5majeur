@@ -15,7 +15,7 @@ CREATE TABLE stepmom (
                          userID INT NOT NULL,
                          lastname VARCHAR(255) NOT NULL,
                          firstname VARCHAR(255) NOT NULL,
-                         age INT NOT NULL
+                         birthday DATE NOT NULL
 );
 
 CREATE TABLE trip (
@@ -26,7 +26,7 @@ CREATE TABLE trip (
                       continent VARCHAR(50) NOT NULL,
                       type VARCHAR(255),
                       duration VARCHAR(255),
-                      network_coverage BOOL,
+                      network_coverage VARCHAR(3),
                       distance INT
 );
 
@@ -71,6 +71,6 @@ VALUES
 
 INSERT INTO trip (category, trip_name, continent, image, distance, network_coverage, duration)
 VALUES
-    (2,'2 semaines de croisière en Méditerranée', 'Europe', 'https://i.la-croix.com/1400x933/smart/2022/01/04/1201193112/Photo-dillustration-bateau-croisiere_0.jpg', 1000, false, 'Deux semaines'),
-    (2, '2 semaines de transhumance dans les Pyrenées', 'Europe', 'https://www.etonnantes-pyrenees.com/wp-content/uploads/2014/12/transhumance-pyrenees.jpg', 1000, false, 'Deux semaines'),
-    (2, '2 semaines de Yoga à Wroclaw', 'Europe', 'https://www.yoghamsa.com/wp-content/uploads/2017/03/yoga-foret.jpg', 1000, false, 'Deux semaines');
+    (2,'2 semaines de croisière en Méditerranée', 'Europe', 'https://i.la-croix.com/1400x933/smart/2022/01/04/1201193112/Photo-dillustration-bateau-croisiere_0.jpg', 1000, 'non', 'Deux semaines'),
+    (2, '2 semaines de transhumance dans les Pyrenées', 'Europe', 'https://www.etonnantes-pyrenees.com/wp-content/uploads/2014/12/transhumance-pyrenees.jpg', 1000, 'non', 'Deux semaines'),
+    (2, '2 semaines de Yoga à Wroclaw', 'Europe', 'https://www.yoghamsa.com/wp-content/uploads/2017/03/yoga-foret.jpg', 1000, 'non', 'Deux semaines');
