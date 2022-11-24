@@ -2,15 +2,18 @@
 @import "navbar/navbar.css";
 @import 'homepage/homepage.css';
 @import "homepage/homepageLogin.css";
+@import "animationModal.css";
+
 
 body {
     margin: 0;
     background-color: #f4fefe;
+    overflow-x: hidden;
 }
 
 main {
     margin : 1.5rem;
 }
 
-@import "animationModal.css";
+
 

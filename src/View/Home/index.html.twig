@@ -1,5 +1,8 @@
 {% extends 'layout.html.twig' %}
 
+{% block header %}
+    {% include 'navbar/navbar-unlog.html.twig' %}
+{% endblock %}
 
 
 {% block content %}
@@ -7,70 +10,82 @@
     {% include 'navbar/navbar-unlog.html.twig' %}
 
     <main>
-    <h1 class="homepage-title">Bienvenue !</h1>
-    <div class="img-carousel">
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
+        <h1 class="homepage-title">Bienvenue !</h1>
+        <div class="img-carousel">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
 
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade-content">
-                <img src="assets/images/iStock-523621110.jpg" class="homepage-img" style="width:100%">
-                <div class="text"></div>
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade-content">
+                    <img src="assets/images/iStock-523621110.jpg" class="homepage-img" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade-content">
+                    <img src="assets/images/beach-villa-exterior_1863x1242.jpg" class="homepage-img" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade-content">
+                    <img src="assets/images/jardins-de-sophie-gerardmer.jpg" class="homepage-img" style="width:100%">
+                    <div class="text"></div>
+                </div>
+
             </div>
+            <br>
 
-            <div class="mySlides fade-content">
-                <img src="assets/images/beach-villa-exterior_1863x1242.jpg" class="homepage-img" style="width:100%">
-                <div class="text"></div>
-            </div>
+            <script>
+                let slideIndex = 0;
+                showSlides();
 
-            <div class="mySlides fade-content">
-                <img src="assets/images/jardins-de-sophie-gerardmer.jpg" class="homepage-img" style="width:100%">
-                <div class="text"></div>
-            </div>
-
-        </div>
-        <br>
-
-        <script>
-            let slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                let i;
-                let slides = document.getElementsByClassName("mySlides");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
+                function showSlides() {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) {
+                        slideIndex = 1
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    setTimeout(showSlides, 5000); // Change image every 5 seconds
                 }
-                slideIndex++;
-                if (slideIndex > slides.length) {slideIndex = 1}
-                slides[slideIndex-1].style.display = "block";
-                setTimeout(showSlides, 5000); // Change image every 5 seconds
-            }
-        </script>
-    </div>
-    <section class="articles-section">
-        <div class="first-article">
-            <div class="first-article-text">
-            <h2 class ="article-title">Article 1</h2>
-            <p class="article-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
-            </div>
-            <img src ="https://i.picsum.photos/id/541/200/300.jpg?hmac=nhG-hlD63wW6srZpMlMH73GwqdwqiMD5VDrLV7TQJ08" class="article-img">
+            </script>
         </div>
-        <div class="first-article">
-            <img src ="https://i.picsum.photos/id/477/200/300.jpg?hmac=Y-uy4_ZZZ6HOZCxdiN04OOypBZ3y2dY2gAfu9MvZMSE" class="article-img">
-            <div class="first-article-text">
-            <h2 class="article-title">Article 2</h2>
-            <p class="article-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
+        <section class="articles-section">
+            <div class="first-article">
+                <div class="first-article-text">
+                    <h2 class="article-title">Article 1</h2>
+                    <p class="article-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                        id est laborum."
+                    </p>
+                </div>
+                <img src="https://i.picsum.photos/id/541/200/300.jpg?hmac=nhG-hlD63wW6srZpMlMH73GwqdwqiMD5VDrLV7TQJ08"
+                     class="article-img">
             </div>
-        </div>
-    </section>
+            <div class="first-article">
+                <img src="https://i.picsum.photos/id/477/200/300.jpg?hmac=Y-uy4_ZZZ6HOZCxdiN04OOypBZ3y2dY2gAfu9MvZMSE"
+                     class="article-img">
+                <div class="first-article-text">
+                    <h2 class="article-title">Article 2</h2>
+                    <p class="article-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                        id est laborum."
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
 {% endblock %}
