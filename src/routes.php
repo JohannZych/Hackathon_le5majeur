@@ -13,6 +13,7 @@ return [
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
+    'connection' => ['UserConnectionController', 'login'],
     'searchGoodTrips' => ['TripController', 'searchGoodTrips'],
-    'searchAwayTrips' => ['TripController', 'searchAwayTrips']
+    'searchAwayTrips' => ['TripController', 'searchAwayTrips'],
 ];
