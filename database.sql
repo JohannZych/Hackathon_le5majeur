@@ -74,3 +74,4 @@ VALUES
     (2,'2 semaines de croisière en Méditerranée', 'Europe', 'https://i.la-croix.com/1400x933/smart/2022/01/04/1201193112/Photo-dillustration-bateau-croisiere_0.jpg', 1000, false, 'Deux semaines'),
     (2, '2 semaines de transhumance dans les Pyrenées', 'Europe', 'https://www.etonnantes-pyrenees.com/wp-content/uploads/2014/12/transhumance-pyrenees.jpg', 1000, false, 'Deux semaines'),
     (2, '2 semaines de Yoga à Wroclaw', 'Europe', 'https://www.yoghamsa.com/wp-content/uploads/2017/03/yoga-foret.jpg', 1000, false, 'Deux semaines');
+
