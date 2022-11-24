@@ -31,7 +31,7 @@ CREATE TABLE trip (
 
 ALTER TABLE stepmom ADD CONSTRAINT fk_user_stepmom FOREIGN KEY(userID)
     REFERENCES user (id);
-
+    
 INSERT INTO trip (category, trip_name, continent, image, type)
 VALUES
     ( 1, 'La Réunion', 'Afrique', 'https://www.rungisinternational.com/wp-content/uploads/2020/01/montagne-salazie-778x533.jpg', 'Exotique'),
