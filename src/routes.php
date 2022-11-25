@@ -14,7 +14,10 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'connection' => ['UserConnectionController', 'login'],
+    'inscription' => ['UserInscriptionController', 'register'],
+    'searchGoodTrips' => ['TripController', 'searchGoodTrips'],
+    'searchAwayTrips' => ['TripController', 'searchAwayTrips'],
     'HomePage' => ['UserConnectionController', 'showUserHomePage' ],
     'modifyUser' => ['ModifyUserProfilController', 'modifyUserInfos'],
-    'inscription' => ['UserInscriptionController', 'register'],
+    'logout' => ['UserConnectionController', 'logout']
 ];

@@ -24,8 +24,8 @@ class ModifyUserManager extends AbstractManager
 
     public function modifyUser(array $infosUser)
     {
-        $query = "UPDATE `user` SET firstname = :firstname, lastname = :lastname, email = :email WHERE id = 1";
-        //$_SESSION['user_id']
+        $query = "UPDATE `user` SET firstname = :firstname, lastname = :lastname, email = :email
+              WHERE id = 1"; //$_SESSION['user_id']
         $statement = $this->pdo->prepare($query);
         $statement->bindValue(':firstname', $infosUser['firstname'], PDO::PARAM_STR);
         $statement->bindValue(':lastname', $infosUser['lastname'], PDO::PARAM_STR);
@@ -36,8 +36,8 @@ class ModifyUserManager extends AbstractManager
 
     public function modifyStepmom(array $infosUser)
     {
-        $query = "UPDATE `stepmom` SET firstname = :firstname, lastname = :lastname WHERE userID = 1";
-        //$_SESSION['user_id']
+        $query = "UPDATE `stepmom` SET firstname = :firstname, lastname = :lastname
+                 WHERE userID = 1"; //$_SESSION['user_id']
         $statement = $this->pdo->prepare($query);
         $statement->bindValue(':firstname', $infosUser['stepmomFirstname'], PDO::PARAM_STR);
         $statement->bindValue(':lastname', $infosUser['stepmomLastname'], PDO::PARAM_STR);
