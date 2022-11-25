@@ -16,7 +16,7 @@ class ModifyUserManager extends AbstractManager
 
     public function selectStepmomById()
     {
-        $query = "SELECT *  FROM `stepmom` WHERE userID = 1 "; // $_SESSION ['user_id']
+        $query = "SELECT *  FROM `stepmom` WHERE userID =" .  $_SESSION ['user_id'];
         $statement = $this->pdo->prepare($query);
         $statement->execute();
         return $statement->fetch();
@@ -25,12 +25,12 @@ class ModifyUserManager extends AbstractManager
     public function modifyUser(array $infosUser)
     {
         $query = "UPDATE `user` SET firstname = :firstname, lastname = :lastname, email = :email
-              WHERE id = 1"; //$_SESSION['user_id']
+              WHERE id = :userID";
         $statement = $this->pdo->prepare($query);
         $statement->bindValue(':firstname', $infosUser['firstname'], PDO::PARAM_STR);
         $statement->bindValue(':lastname', $infosUser['lastname'], PDO::PARAM_STR);
         $statement->bindValue(':email', $infosUser['email'], FILTER_VALIDATE_EMAIL);
-        //$statement->bindValue(':userID', $_SESSION['user_id'], PDO::PARAM_INT);
+        $statement->bindValue(':userID', $_SESSION['user_id'], PDO::PARAM_INT);
         $statement->execute();
     }
 

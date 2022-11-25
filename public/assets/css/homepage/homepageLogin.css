@@ -1,7 +1,7 @@
 .trip-choice-display  {
     display: flex;
     margin-top: 1rem;
-
+    justify-content: space-around;
 }
 
 .first-trip {
@@ -10,7 +10,7 @@
     border-radius: 1rem;
     padding: 1rem;
     box-shadow: 2px 2px 5px dimgray;
-    background: rgba(26, 87, 159, .7);
+    background: #c3daf5;
 
 }
 
@@ -52,7 +52,6 @@
     cursor: pointer;
     -webkit-appearance: button;
     -moz-appearance: button;
-    appearance: button;
     text-decoration: none;
 
 }
@@ -76,7 +75,6 @@
     cursor: pointer;
     -webkit-appearance: button;
     -moz-appearance: button;
-    appearance: button;
     text-decoration: none;
 
 }
@@ -100,7 +98,6 @@
     cursor: pointer;
     -webkit-appearance: button;
     -moz-appearance: button;
-    appearance: button;
     text-decoration: none;
 
 }
@@ -115,7 +112,7 @@
 .second-trip {
     width: 80%;
     margin:3rem;
-    background: rgba(18, 181, 86, .7);
+    background: #ccfadf;
     border-radius: 1rem;
     padding: 1rem;
     box-shadow: 2px 2px 5px dimgray;
@@ -133,7 +130,7 @@
 .third-trip {
     width: 80%;
     margin:3rem;
-    background: rgba(168, 18, 14, .7);
+    background: #f9bdbc;
     border-radius: 1rem;
     padding: 1rem;
     box-shadow: 2px 2px 5px dimgray;
@@ -150,9 +147,17 @@
 .trip-choice-button-div {
     margin-top: 3rem;
     margin-bottom: 2rem;
-    margin-left: 2.5rem;
+    margin-left: 2rem;
 }
 
-.homepage-user-title {
+
+.homepage-user-title-h1 {
     text-align: center;
+    font-size: 3rem;
+}
+
+.first-trip, .second-trip, .third-trip {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
