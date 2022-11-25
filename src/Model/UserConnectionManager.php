@@ -48,4 +48,13 @@ class UserConnectionManager extends AbstractManager
 
         return $statement->fetch();
     }
+    public function selectOneById(int $id): array|false
+    {
+        // prepared request
+        $statement = $this->pdo->prepare("SELECT * FROM user WHERE id = :id");
+        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetch();
+    }
 }
