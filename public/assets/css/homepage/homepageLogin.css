@@ -10,7 +10,7 @@
     border-radius: 1rem;
     padding: 1rem;
     box-shadow: 2px 2px 5px dimgray;
-    background: rgba(26, 87, 159, .7);
+    background: #c3daf5;
 
 }
 
@@ -115,7 +115,7 @@
 .second-trip {
     width: 80%;
     margin:3rem;
-    background: rgba(18, 181, 86, .7);
+    background: #ccfadf;
     border-radius: 1rem;
     padding: 1rem;
     box-shadow: 2px 2px 5px dimgray;
@@ -133,7 +133,7 @@
 .third-trip {
     width: 80%;
     margin:3rem;
-    background: rgba(168, 18, 14, .7);
+    background: #f9bdbc;
     border-radius: 1rem;
     padding: 1rem;
     box-shadow: 2px 2px 5px dimgray;

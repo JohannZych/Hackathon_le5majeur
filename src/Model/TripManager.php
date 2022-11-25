@@ -36,11 +36,11 @@ class TripManager extends AbstractManager
         return $statement->fetchAll();
     }
 
-//    public function getTripById(int $id): array
-//    {
-//        $statement = $this->pdo->prepare('SELECT * FROM trip WHERE id = :id');
-//        $statement->bindValue(':id', $id, PDO::PARAM_INT);
-//        $statement->execute();
-//        return $statement->fetch();
-//    }
+    public function getExtremeTrips()
+    {
+        $query = "SELECT * FROM trip WHERE category=3";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        return $statement->fetchAll();
+    }
 }
