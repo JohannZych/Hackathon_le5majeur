@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@800&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
 @import "navbar/navbar.css";
 @import 'homepage/homepage.css';
 @import "homepage/homepageLogin.css";
 @import "animationModal.css";
+@import 'searchTrips.css';
 
 
 body {
     margin: 0;
-    background-color: #f4fefe;
+    background-color: #eeeeee;
     overflow-x: hidden;
 }
 
@@ -15,5 +17,10 @@ main {
     margin : 1.5rem;
 }
 
-
-
+:root {
+    --mediumTravel : #12B556;
+    --softTravel : #1A579F;
+    --extremeTravel : #A8120E;
+    --fontText : 'Palanquin', sans-serif;
+    --fontTitle : 'Libre Franklin', sans-serif;
+}
