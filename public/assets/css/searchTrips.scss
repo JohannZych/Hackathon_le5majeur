@@ -37,6 +37,7 @@
 .goodTripsTitle {
     color: var(--softTravel);
     padding: 32px;
+    font-family: var(--fontTitle);
 }
 
 .goodTripsText, .awayTripsText {
@@ -44,6 +45,7 @@
     padding: 8px 16px 8px 16px;
     line-height: 24px;
     width: 66%;
+    font-family: var(--fontText);
 }
 
 .searchTripsErrors {
@@ -76,6 +78,7 @@
         border: 0;
         margin-top: 16px;
         font-size: clamp(16px, 1.5em, 2.5vw);
+        font-family: var(--fontText);
 
         &:hover {
             background-color: white;
@@ -114,12 +117,14 @@
     text-align: center;
     color: var(--softTravel);
     margin-bottom: 32px;
+    font-family: var(--fontTitle);
 }
 
 .trip-destination {
     font-size: clamp(24px, 2em, 2.5vw);
     line-height: 64px;
     width:45%;
+    font-family: var(--fontText);
 }
 
 .trip-name-select {
@@ -130,16 +135,18 @@
     width: 700px;
 }
 
-.goodSelectTrip, .awaySelectTrip {
+.goodSelectTrip, .awaySelectTrip, .extremeSelectTrip {
     text-decoration: none;
     color: var(--softTravel);
     font-size: 32px;
     line-height: 64px;
     padding: 0 16px 0 16px;
+    border-radius: 24px;
+    font-family: var(--fontText);
 
     &:hover {
         background-color: var(--softTravel);
-        border-radius: 24px;
+
         color: white;
     }
 
@@ -153,6 +160,7 @@
 .awayTripsTitle {
     color: var(--mediumTravel);
     padding: 32px;
+    font-family: var(--fontTitle);
 }
 
 .awayTripsForm {
@@ -194,14 +202,30 @@
         background-color: var(--mediumTravel);
     }
 }
+.extremeSelectTrip {
+    color: var(--extremeTravel);
+    border:1px solid var(--extremeTravel);
+    font-family: var(--fontText);
+    &:hover {
+        background-color: var(--extremeTravel);
+    }
+}
+.extreme-trips-body-container {
+    display:flex;
+    margin-top:32px;
+    gap:32px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
 .away-trips-result-title {
     padding: 32px 16px 6px 16px;
     width: 70%;
     text-align: center;
     color: var(--mediumTravel);
     margin-bottom: 32px;
+    font-family: var(--fontTitle);
 }
-.away-trip-destination {
+.away-trip-destination, .extreme-trip-destination {
     line-height:32px;
 }
 .link-select-container {
@@ -209,6 +233,8 @@
 }
 .awaySelectTrip {
     padding:8px;
+    border:1px solid var(--mediumTravel);
+    font-family: var(--fontText);
 }
 .no-trip {
     text-align:center;

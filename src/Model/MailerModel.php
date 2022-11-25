@@ -20,7 +20,7 @@ class MailerModel
         $email->Host = 'smtp.gmail.com';
         $email->SMTPAuth = true;
         $email->Username = 'hackathon.cinqmajeur@gmail.com';
-        $email->Password = 'jjbyk5m@';
+        $email->Password = 'buyjrbpnvpmqdmli';
         $email->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $email->Port = 465;
 
