@@ -37,10 +37,24 @@ class MailerModel
     public function sendTravelConfirmation($email)
     {
         $mail = $this->createMailer();
+        //$travelModel = new TripManager();
+//        $travel = $travelModel->
         try {
             $mail->addAddress("$email");
             $mail->Subject = 'Un cadeau de la part de ...';
-            $text = "<h1>Vous avez reçu un cadeau de la part de ... !</h1>";
+            $text = "<html>
+<head>
+<style>
+body * {width: 100%}
+.email-title {text-align: center; margin: 16px}
+.email-text {font-family: Verdana, sans-serif; }
+</style>
+</head>
+<body>
+<h1 class='email-title'>Vous avez reçu un cadeau de la part</h1>
+<h3 class='email-text'></h3>
+</body>
+</html>";
             $mail->Body = $text;
             $mail->send();
         } catch (Exception $e) {
