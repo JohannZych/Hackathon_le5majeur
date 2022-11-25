@@ -4,6 +4,7 @@
 @import 'homepage/homepage.css';
 @import "homepage/homepageLogin.css";
 @import "animationModal.css";
+@import 'searchTrips.css';
 
 
 body {
@@ -23,6 +24,3 @@ main {
     --fontText : 'Palanquin', sans-serif;
     --fontTitle : 'Libre Franklin', sans-serif;
 }
-
-
-
