@@ -59,10 +59,10 @@ VALUES
 
 INSERT INTO trip (category, trip_name, continent, image, distance)
 VALUES
-    (3, '1 semaine à Montcuq avec soirée Bingo et Blagues', 'Europe', 'https://woody.cloudly.space/app/uploads/lot-tourisme/2022/08/thumbs/220703083433-Vue-drone-du-village-de-Montcuq-%C2%A9%C2%A9-Lot-Tourisme-Cyril-Novello-640x360.jpg', 'zero'),
+    (3, '1 semaine à Montcuq avec soirée Bingo et Blagues', 'Europe', 'https://woody.cloudly.space/app/uploads/lot-tourisme/2022/08/thumbs/220703083433-Vue-drone-du-village-de-Montcuq-%C2%A9%C2%A9-Lot-Tourisme-Cyril-Novello-640x360.jpg', 1),
     (3, '1 semaine de Trek en Patagonie', 'Amérique', 'https://www.1001-pas.fr/wp-content/uploads/2016/05/Patagonie-torres_del_Paine-tours-1024x683.jpg', 5000),
     (3, '1 semaine de Safari en tente au Kenya', 'Afrique', 'https://www.kuoni.fr/wp-content/uploads/2021/06/onu22riuciwnmt5.jpg', 5000),
-    (3, '2 semaines de Poterie extrême', 'Europe', 'https://www.ateliers-hybride.fr/wp-content/uploads/2021/07/initiation-ceramique-pau.jpg','zero'),
+    (3, '2 semaines de Poterie extrême', 'Europe', 'https://www.ateliers-hybride.fr/wp-content/uploads/2021/07/initiation-ceramique-pau.jpg',1),
     (3, '2 semaines de science à Tchernobyl', 'Europe', 'https://medias.pourlascience.fr/api/v1/images/view/60cc6f548fe56f336d45dcc7/wide_1300/image.jpg', 1000),
     (3, '2 semaines de bronzette aux Iles Kerguelen', 'Antarctique', 'https://www.ensta-bretagne.fr/sites/default/files/2019-06/mission-poleipev.jpg', 5000),
     (3, '1 mois de croisière avec Yvette Horner et son accordéon', 'Europe', 'https://www.radioclassique.fr/wp-content/thumbnails/uploads/2018/06/20180612-horner-tt-width-1200-height-630-fill-0-crop-1-bgcolor-ffffff.jpg', 5000),

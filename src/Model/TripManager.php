@@ -2,6 +2,8 @@
 
 namespace App\Model;
 
+use PDO;
+
 class TripManager extends AbstractManager
 {
     public const TABLE = 'trip';
@@ -33,4 +35,12 @@ class TripManager extends AbstractManager
         $statement->execute();
         return $statement->fetchAll();
     }
+
+//    public function getTripById(int $id): array
+//    {
+//        $statement = $this->pdo->prepare('SELECT * FROM trip WHERE id = :id');
+//        $statement->bindValue(':id', $id, PDO::PARAM_INT);
+//        $statement->execute();
+//        return $statement->fetch();
+//    }
 }
