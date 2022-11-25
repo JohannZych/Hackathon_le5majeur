@@ -118,6 +118,9 @@
     text-decoration: none;
     color: white;
 }
+.submit, a:hover{
+    color: white;
+}
 
 .submit:active {
     background-color: #06b;
