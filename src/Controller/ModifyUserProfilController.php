@@ -18,7 +18,7 @@ class ModifyUserProfilController extends AbstractController
                 $userInfos->modifyUser($infosUser);
                 $userInfos->modifyStepmom($infosUser);
                 echo "<script>alert('Vos informations ont bien été modifiées.')</script>";
-                header('Refresh:0 /');
+                header('Refresh:0 /HomePage');
             } else {
                 return $this->twig->render('User/modifyUser.html.twig', [
                     'user' => $user, 'stepmom' => $stepmom, 'errors' => $errors
