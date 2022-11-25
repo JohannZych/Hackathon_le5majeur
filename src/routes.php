@@ -19,4 +19,5 @@ return [
     'searchAwayTrips' => ['TripController', 'searchAwayTrips'],
     'HomePage' => ['UserConnectionController', 'showUserHomePage' ],
     'modifyUser' => ['ModifyUserProfilController', 'modifyUserInfos'],
+    'logout' => ['UserConnectionController', 'logout']
 ];
