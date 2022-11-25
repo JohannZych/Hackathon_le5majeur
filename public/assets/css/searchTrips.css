@@ -195,6 +195,7 @@
   text-align: center;
   color: var(--mediumTravel);
   margin-bottom: 32px;
+  font-family: var(--fontTitle);
 }
 
 .away-trip-destination, .extreme-trip-destination {
