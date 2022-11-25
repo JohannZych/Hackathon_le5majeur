@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+{% block header %}
+    {% include 'navbar/navbar-log.html.twig' %}
+{% endblock %}
+{% block content %}
+    <div class="extreme-trips-body-container">
+        {% for trip in trips %}
+            <div class="extremeTripContainer">
+                <img src="{{ trip.image }}" class="trip-image" alt="">
+                <div class="trip-name-select">
+                    <h4 class="trip-destination extreme-trip-destination">{{ trip.trip_name }}</h4>
+                    <p class="link-select-container"><a href="purchaseConfirmation?id={{ trip.id }}"
+                                                        class="extremeSelectTrip">Sélectionner ce voyage</a></p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
