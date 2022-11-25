@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="assets/css/purchaseConfirmation.css">
-<div class="purchase-description-container">
+<link rel="stylesheet" href="assets/css/style.css">
+<div class="purchase-description-container{{ travel.category }}">
     <h2 class="purchase-title">Description</h2>
     <div class="purchase-container">
 
@@ -17,7 +18,7 @@
                 couverture Reseau : <span class="important-info-purchase">{{ travel.network_coverage }} </span><br>
                 distance : <span class="important-info-purchase">{{ travel.distance }}</span>
             </p>
-            <div class="purchase-button">
+            <div class="purchase-button{{ travel.category }}">
                 <a class="purchase-link">Valider</a>
             </div>
         </div>
