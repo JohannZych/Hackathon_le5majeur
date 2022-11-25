@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="assets/css/purchaseConfirmation.css">
+<div class="purchase-description-container">
+    <h2 class="purchase-title">Description</h2>
+    <div class="purchase-container">
+
+        <div class="purchase-image-container">
+            <img class="purchase-image" src="{{ travel.image }}" alt="travelImage">
+        </div>
+
+        <div>
+            <span class="purchase-description-resume">resumé : </span><br>
+            <p class="purchase-description">
+                Destination : <span class="important-info-purchase">{{ travel.trip_name }}</span> <br>
+                Continent : <span class="important-info-purchase">{{ travel.continent }}</span> <br>
+                type : <span class="important-info-purchase">{{ travel.type }}</span> <br>
+                pour : <span class="important-info-purchase">{{ travel.duration }}</span> <br>
+                couverture Reseau : <span class="important-info-purchase">{{ travel.network_coverage }} </span><br>
+                distance : <span class="important-info-purchase">{{ travel.distance }}</span>
+            </p>
+            <div class="purchase-button">
+                <a class="purchase-link">Valider</a>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,112 @@
+.purchase-description-container {
+    background: linear-gradient(#3f87a6, #ebf8e1, #f69d3c);
+    margin: 0;
+    height: 100%;
+}
+
+.purchase-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.purchase-title {
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+}
+
+.purchase-image-container {
+    text-align: center;
+    margin: 8px;
+}
+
+.purchase-image {
+    height:400px;
+    width:700px;
+    border-radius:20px;;
+}
+
+.purchase-description {
+    font-size: 25px;
+}
+
+.purchase-link {
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.purchase-button {
+    backface-visibility: hidden;
+    text-decoration: none;
+    background-color: #eee;
+    border-radius: 5px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-size: 100%;
+    height: 30px;
+    line-height: 1.15;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s, box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-bottom: 30px;
+}
+
+.purchase-button:disabled {
+    cursor: default;
+}
+
+.purchase-button:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+.purchase-button:hover {
+    background-color: beige;
+}
+
+.purchase-description-resume {
+    text-align: center;
+}
+
+.purchase-description-resume {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.important-info-purchase {
+    font-weight: bolder;
+}
+
+@media screen and (min-width: 1024px) {
+    .purchase-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .purchase-description {
+        text-align: left;
+    }
+
+    .purchase-button {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 30px;
+    }
+}
