@@ -54,11 +54,8 @@ class ModifyUserManager extends AbstractManager
         if (empty($infosUser['lastname'])) {
             $errors[] = 'Nom obligatoire';
         }
-        if (empty($infosUser['telephone'])) {
-            $errors[] = 'téléphone obligatoire';
-        }
-        if (empty($infosUser['address'])) {
-            $errors[] = 'adresse postale obligatoire';
+        if (!filter_var($infosUser['email'], FILTER_VALIDATE_EMAIL)) {
+            $errors[] = 'E-mail obligatoire';
         }
         return $errors;
     }

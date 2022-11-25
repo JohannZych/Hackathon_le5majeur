@@ -13,10 +13,17 @@ class ModifyUserProfilController extends AbstractController
         $stepmom = $userInfos->selectStepmomById();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $infosUser = array_map('trim', $_POST);
-            $userInfos->modifyUser($infosUser);
-            $userInfos->modifyStepmom($infosUser);
-            echo "<script>alert('Vos informations ont bien été modifiées.')</script>";
-            header('Refresh:0 /');
+            $errors = $userInfos->validateModifiedInfos($infosUser);
+            if (empty($errors)) {
+                $userInfos->modifyUser($infosUser);
+                $userInfos->modifyStepmom($infosUser);
+                echo "<script>alert('Vos informations ont bien été modifiées.')</script>";
+                header('Refresh:0 /');
+            } else {
+                return $this->twig->render('User/modifyUser.html.twig', [
+                    'user' => $user, 'stepmom' => $stepmom, 'errors' => $errors
+                ]);
+            }
         }
         return $this->twig->render('User/modifyUser.html.twig', [
             'user' => $user, 'stepmom' => $stepmom
