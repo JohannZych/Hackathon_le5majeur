@@ -33,4 +33,12 @@ class TripManager extends AbstractManager
         $statement->execute();
         return $statement->fetchAll();
     }
+
+    public function getExtremeTrips()
+    {
+        $query = "SELECT * FROM trip WHERE category=3";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        return $statement->fetchAll();
+    }
 }

@@ -17,6 +17,7 @@ return [
     'inscription' => ['UserInscriptionController', 'register'],
     'searchGoodTrips' => ['TripController', 'searchGoodTrips'],
     'searchAwayTrips' => ['TripController', 'searchAwayTrips'],
-    'HomePage' => ['UserConnectionController', 'showUserHomePage' ],
+    'searchExtremeTrips' => ['TripController', 'searchExtremeTrips'],
+    'HomePage' => ['UserConnectionController', 'showUserHomePage'],
     'modifyUser' => ['ModifyUserProfilController', 'modifyUserInfos'],
 ];

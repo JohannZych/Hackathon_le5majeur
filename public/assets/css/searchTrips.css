@@ -112,19 +112,19 @@
   width: 700px;
 }
 
-.goodSelectTrip, .awaySelectTrip {
+.goodSelectTrip, .awaySelectTrip, .extremeSelectTrip {
   text-decoration: none;
   color: var(--softTravel);
   font-size: 32px;
   line-height: 64px;
   padding: 0 16px 0 16px;
 }
-.goodSelectTrip:hover, .awaySelectTrip:hover {
+.goodSelectTrip:hover, .awaySelectTrip:hover, .extremeSelectTrip:hover {
   background-color: var(--softTravel);
   border-radius: 24px;
   color: white;
 }
-.goodSelectTrip:active, .awaySelectTrip:active {
+.goodSelectTrip:active, .awaySelectTrip:active, .extremeSelectTrip:active {
   scale: 0.8;
 }
 
@@ -165,6 +165,21 @@
   background-color: var(--mediumTravel);
 }
 
+.extremeSelectTrip {
+  color: var(--extremeTravel);
+}
+.extremeSelectTrip:hover {
+  background-color: var(--extremeTravel);
+}
+
+.extreme-trips-body-container {
+  display: flex;
+  margin-top: 32px;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .away-trips-result-title {
   padding: 32px 16px 6px 16px;
   width: 70%;
@@ -173,7 +188,7 @@
   margin-bottom: 32px;
 }
 
-.away-trip-destination {
+.away-trip-destination, .extreme-trip-destination {
   line-height: 32px;
 }
 

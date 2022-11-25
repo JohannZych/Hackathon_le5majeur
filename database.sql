@@ -66,7 +66,7 @@ VALUES
     (3, '2 semaines de science à Tchernobyl', 'Europe', 'https://medias.pourlascience.fr/api/v1/images/view/60cc6f548fe56f336d45dcc7/wide_1300/image.jpg', 1000),
     (3, '2 semaines de bronzette aux Iles Kerguelen', 'Antarctique', 'https://www.ensta-bretagne.fr/sites/default/files/2019-06/mission-poleipev.jpg', 5000),
     (3, '1 mois de croisière avec Yvette Horner et son accordéon', 'Europe', 'https://www.radioclassique.fr/wp-content/thumbnails/uploads/2018/06/20180612-horner-tt-width-1200-height-630-fill-0-crop-1-bgcolor-ffffff.jpg', 5000),
-    (3, '1 mois le Tour Europe en marchant', 'Europe', 'https://static.lpnt.fr/images/2012/02/16/sipa-506373-jpg_346415_660x287.JPG', 1000),
+    (3, 'Un tour d''Europe en 1 mois, en marchant', 'Europe', 'https://static.lpnt.fr/images/2012/02/16/sipa-506373-jpg_346415_660x287.JPG', 1000),
     (3, '1 mois de pêche en Mer du Nord', 'Europe', 'https://www.notre-planete.info/actualites/images/peche/bateau-peche-mer-du-Nord.webp', 5000);
 
 INSERT INTO trip (category, trip_name, continent, image, distance, network_coverage, duration)

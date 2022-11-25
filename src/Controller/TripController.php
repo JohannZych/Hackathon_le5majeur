@@ -80,4 +80,13 @@ class TripController extends AbstractController
         }
         return $this->twig->render('Trips/awayTrips.html.twig');
     }
+
+    public function searchExtremeTrips()
+    {
+        $tripManager = new TripManager();
+        $trips = $tripManager->getExtremeTrips();
+        return $this->twig->render('Trips/extremeTrips.html.twig', [
+            'trips' => $trips
+        ]);
+    }
 }
