@@ -20,5 +20,5 @@ return [
     'searchExtremeTrips' => ['TripController', 'searchExtremeTrips'],
     'HomePage' => ['UserConnectionController', 'showUserHomePage'],
     'modifyUser' => ['ModifyUserProfilController', 'modifyUserInfos'],
-    'logout' => ['UserConnectionController', 'logout']
+    'logout' => ['UserConnectionController', 'logout'],
 ];

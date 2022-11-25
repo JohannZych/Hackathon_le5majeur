@@ -9,7 +9,7 @@ class ItemController extends AbstractController
     /**
      * List items
      */
-    public function index(): string
+  /*  public function index(): string
     {
         $itemManager = new ItemManager();
         $items = $itemManager->selectAll('title');
@@ -20,7 +20,7 @@ class ItemController extends AbstractController
     /**
      * Show informations for a specific item
      */
-    public function show(int $id): string
+   /* public function show(int $id): string
     {
         $itemManager = new ItemManager();
         $item = $itemManager->selectOneById($id);
@@ -31,7 +31,7 @@ class ItemController extends AbstractController
     /**
      * Edit a specific item
      */
-    public function edit(int $id): ?string
+   /* public function edit(int $id): ?string
     {
         $itemManager = new ItemManager();
         $item = $itemManager->selectOneById($id);
@@ -59,7 +59,7 @@ class ItemController extends AbstractController
     /**
      * Add a new item
      */
-    public function add(): ?string
+   /* public function add(): ?string
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // clean $_POST data
@@ -81,7 +81,7 @@ class ItemController extends AbstractController
     /**
      * Delete a specific item
      */
-    public function delete(): void
+  /*  public function delete(): void
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $id = trim($_POST['id']);
@@ -90,5 +90,5 @@ class ItemController extends AbstractController
 
             header('Location:/items');
         }
-    }
+    }*/
 }
