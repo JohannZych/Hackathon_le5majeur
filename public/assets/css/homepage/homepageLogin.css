@@ -1,7 +1,7 @@
 .trip-choice-display  {
     display: flex;
     margin-top: 1rem;
-
+    justify-content: space-around;
 }
 
 .first-trip {
@@ -150,11 +150,17 @@
 .trip-choice-button-div {
     margin-top: 3rem;
     margin-bottom: 2rem;
-    margin-left: 2.5rem;
+    margin-left: 2rem;
 }
 
 
 .homepage-user-title-h1 {
     text-align: center;
     font-size: 3rem;
+}
+
+.first-trip, .second-trip, .third-trip {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
