@@ -1,39 +1,193 @@
 .search-trips-body-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 150px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .form-container {
   grid-column: 0/1;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.form-container:after {
-  content: "";
-  background: black;
-  position: absolute;
-  bottom: 25%;
-  top: 25%;
-  left: 0;
-  width: 1px;
+.form-container.goodTrips {
+  border-right: 3px solid var(--softTravel);
 }
 
 .all-trips-container {
   grid-column: 2/4;
+}
+
+.good-trips-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #c3daf5;
 }
 
 .trip-image {
   height: 400px;
-  width: 770px;
+  width: 700px;
+  border-radius: 20px;
 }
 
-.trip-container {
+.goodTripsTitle {
+  color: var(--softTravel);
+  padding: 32px;
+}
+
+.goodTripsText, .awayTripsText {
+  text-align: center;
+  padding: 8px 16px 8px 16px;
+  line-height: 24px;
+  width: 66%;
+}
+
+.searchTripsErrors {
+  color: red;
+  list-style: none;
+}
+
+.goodTripsForm select, .awayTripsForm select {
+  margin-bottom: 16px;
+  text-align: center;
+  color: white;
+  padding: 6px;
+  border-radius: 10px;
+  font-size: clamp(16px, 1.5em, 2.5vw);
+}
+.goodTripsForm select option:hover, .awayTripsForm select option:hover {
+  background-color: white;
+}
+.goodTripsForm button, .awayTripsForm button {
+  color: white;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 10px;
+  text-align: center;
+  border: 0;
+  margin-top: 16px;
+  font-size: clamp(16px, 1.5em, 2.5vw);
+}
+.goodTripsForm button:hover, .awayTripsForm button:hover {
+  background-color: white;
+}
+.goodTripsForm button:active, .awayTripsForm button:active {
+  scale: 0.8;
+}
+
+.goodTripsForm select {
+  background-color: var(--softTravel);
+}
+.goodTripsForm select option:hover {
+  color: var(--softTravel);
+}
+.goodTripsForm button {
+  background-color: var(--softTravel);
+}
+.goodTripsForm button:hover {
+  color: var(--softTravel);
+  border: 2px solid var(--softTravel);
+}
+
+.good-trips-result-title {
+  padding: 32px 16px 6px 16px;
+  width: 70%;
+  text-align: center;
+  color: var(--softTravel);
+  margin-bottom: 32px;
+}
+
+.trip-destination {
+  font-size: clamp(24px, 2em, 2.5vw);
+  line-height: 64px;
+  width: 45%;
+}
+
+.trip-name-select {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  width: 700px;
+}
+
+.goodSelectTrip, .awaySelectTrip {
+  text-decoration: none;
+  color: var(--softTravel);
+  font-size: 32px;
+  line-height: 64px;
+  padding: 0 16px 0 16px;
+}
+.goodSelectTrip:hover, .awaySelectTrip:hover {
+  background-color: var(--softTravel);
+  border-radius: 24px;
+  color: white;
+}
+.goodSelectTrip:active, .awaySelectTrip:active {
+  scale: 0.8;
+}
+
+.awayTripsTitle {
+  color: var(--mediumTravel);
+  padding: 32px;
+}
+
+.awayTripsForm select {
+  background-color: var(--mediumTravel);
+}
+.awayTripsForm select option:hover {
+  color: var(--mediumTravel);
+}
+.awayTripsForm button {
+  background-color: var(--mediumTravel);
+}
+.awayTripsForm button:hover {
+  color: var(--mediumTravel);
+  border: 2px solid var(--mediumTravel);
+}
+
+.away-trips-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #ccfadf;
+}
+
+.form-container.away-trips {
+  border-right: 3px solid var(--mediumTravel);
+}
+
+.awaySelectTrip {
+  color: var(--mediumTravel);
+}
+.awaySelectTrip:hover {
+  background-color: var(--mediumTravel);
+}
+
+.away-trips-result-title {
+  padding: 32px 16px 6px 16px;
+  width: 70%;
+  text-align: center;
+  color: var(--mediumTravel);
+  margin-bottom: 32px;
+}
+
+.away-trip-destination {
+  line-height: 32px;
+}
+
+.link-select-container {
+  margin: 0;
+}
+
+.awaySelectTrip {
+  padding: 8px;
+}
+
+.no-trip {
+  text-align: center;
+  padding-top: 32px;
 }
 
 /*# sourceMappingURL=searchTrips.css.map */

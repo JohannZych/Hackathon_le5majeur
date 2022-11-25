@@ -1,60 +1,79 @@
 {% extends 'layout.html.twig' %}
+{% block header %}
+    {% include 'navbar/navbar-unlog.html.twig' %}
+{% endblock %}
 {% block content %}
     <div class="search-trips-body-container">
-        <div class="form-container">
-            <h2>Offrez un voyage inoubliable</h2>
-            <p>Sélectionnez vos préférences de recherche, vous obtiendrez une sélection de voyages sur-mesure pour votre
+        <div class="form-container goodTrips">
+            <h2 class="goodTripsTitle"> Offrez un voyage inoubliable</h2>
+            <p class="goodTripsText">Sélectionnez vos préférences de recherche, vous obtiendrez une sélection de voyages
+                sur-mesure pour votre
                 belle-maman.</p>
 
             <ul class="error-list">
                 {% for error in errors %}
-                    <li>{{ error }}</li>
+                    <li class="searchTripsErrors">{{ error }}</li>
                 {% endfor %}
             </ul>
-            <form action="searchGoodTrips" method="POST">
+            <form class="goodTripsForm" action="searchGoodTrips" method="POST">
                 <select name="continent" id="continent">
                     <option value="">Choisissez un continent de destination</option>
                     <option value="Europe" {% if inputs.continent == "Europe" %} selected {% endif %}>Europe</option>
-                    <option value="Amérique" {% if inputs.continent == "Amérique" %} selected {% endif %}>Amérique</option>
+                    <option value="Amérique" {% if inputs.continent == "Amérique" %} selected {% endif %}>Amérique
+                    </option>
                     <option value="Asie" {% if inputs.continent == "Asie" %} selected {% endif %}>Asie</option>
                     <option value="Océanie" {% if inputs.continent == "Océanie" %} selected {% endif %}>Océanie</option>
                     <option value="Afrique" {% if inputs.continent == "Afrique" %} selected {% endif %}>Afrique</option>
-                    <option value="Antarctique" {% if inputs.continent == "Antarctique" %} selected {% endif %}>Antarctique</option>
+                    <option value="Antarctique" {% if inputs.continent == "Antarctique" %} selected {% endif %}>
+                        Antarctique
+                    </option>
                 </select>
                 <br>
                 <select name="type" id="type">
                     <option value="">Quel type de voyage ?</option>
                     <option value="Sportif" {% if inputs.type == "Sportif" %} selected {% endif %}>Sportif</option>
-                    <option value="Découverte d'une culture" {% if inputs.type == "Découverte d'une culture" %} selected {% endif %}>Découverte d'une culture</option>
-                    <option value="Visite d'une capitale" {% if inputs.type == "Visite d'une capitale" %} selected {% endif %}>Visite d'une capitale</option>
+                    <option
+                        value="Découverte d'une culture" {% if inputs.type == "Découverte d'une culture" %} selected {% endif %}>
+                        Découverte d'une culture
+                    </option>
+                    <option
+                        value="Visite d'une capitale" {% if inputs.type == "Visite d'une capitale" %} selected {% endif %}>
+                        Visite d'une capitale
+                    </option>
                 </select>
                 <br>
                 <select name="duration" id="continent">
-                    <option value="" >Quelle durée ?</option>
-                    <option value="Une semaine" {% if inputs.duration == "Une semaine" %} selected {% endif %}>Une semaine</option>
+                    <option value="">Quelle durée ?</option>
+                    <option value="Une semaine" {% if inputs.duration == "Une semaine" %} selected {% endif %}>Une
+                        semaine
+                    </option>
                     <option value="Deux semaines" {% if inputs.duration == "Deux semaines" %} selected {% endif %}>
                         Deux semaines
                     </option>
                     <option value="Un mois">Un mois</option>
                 </select>
+                <br>
                 <button type="submit">Rechercher</button>
             </form>
 
         </div>
         <div class="all-trips-container">
             {% if trips %}
-            <h3 class="result-title">Les voyages en {{ inputs.continent }} de type "{{ inputs.type }}" et d'une durée de
-                "{{ inputs.duration }}" </h3>
+                <div class="good-trips-container">
+                <h3 class="good-trips-result-title">Les voyages en {{ inputs.continent }} de type {{ inputs.type }} et
+                    d'une durée de
+                    {{ inputs.duration }} </h3>
             {% endif %}
             {% for trip in trips %}
-            <div class="trip-container">
-                <img src="{{ trip.image }}" class="trip-image" alt="">
-                {{ trip.trip_name }}
-                {{ trip.id }}
-                {% else %}
-                    <h3>{{ noTrip }}</h3>
-                {% endfor %}
-            </div>
+                    <img src="{{ trip.image }}" class="trip-image" alt="">
+                <div class="trip-name-select">
+                    <h4 class="trip-destination">{{ trip.trip_name }}</h4>
+                 <a href="purchaseConfirmation?id={{ trip.id }}" class="goodSelectTrip">Sélectionner ce voyage</a>
+                </div>
+            {% else %}
+                <h3 class="no-trip">{{ noTrip }}</h3>
+            {% endfor %}
+                </div>
         </div>
     </div>
 {% endblock %}

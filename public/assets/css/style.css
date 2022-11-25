@@ -3,6 +3,7 @@
 @import 'homepage/homepage.css';
 @import "homepage/homepageLogin.css";
 @import "animationModal.css";
+@import 'searchTrips.css';
 
 
 body {

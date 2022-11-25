@@ -1,34 +1,46 @@
 {% extends 'layout.html.twig' %}
+{% block header %}
+    {% include 'navbar/navbar-unlog.html.twig' %}
+{% endblock %}
 {% block content %}
     <div class="search-trips-body-container">
-        <div class="form-container">
-            <h2>Offrez vous des vacances</h2>
-            <p>Sélectionnez vos préférences de recherche, vous obtiendrez une sélection de voyages sur-mesure pour votre
+        <div class="form-container away-trips">
+            <h2 class="awayTripsTitle">Offrez vous des vacances</h2>
+            <p class="awayTripsText">Sélectionnez vos préférences de recherche, vous obtiendrez une sélection de voyages
+                sur-mesure pour votre
                 belle-maman.</p>
             <ul class="error-list">
                 {% for error in errors %}
-                    <li>{{ error }}</li>
+                    <li class="searchTripsErrors">{{ error }}</li>
                 {% endfor %}
             </ul>
-            <form action="searchAwayTrips" method="POST">
+            <form class="awayTripsForm" action="searchAwayTrips" method="POST">
                 <select name="distance" id="distance">
                     <option value="">Jusqu'où souhaitez-vous envoyer votre belle-mère</option>
-                    <option value=1>De 0 à 1000 km</option>
-                    <option value=1000>De 1000 à 5000km</option>
-                    <option value=5000>Plus de 5000km</option>
+                    <option value=1 {% if inputs.distance == 1 %} selected {% endif %}>De 0 à 1000 km</option>
+                    <option value=1000 {% if inputs.distance == 1000 %} selected {% endif %}>De 1000 à 5000km</option>
+                    <option value=5000 {% if inputs.distance == 5000 %} selected {% endif %}>Plus de 5000km</option>
                 </select>
                 <br>
                 <select name="duration" id="duration">
                     <option value="">Quelle durée ?</option>
-                    <option value="Une semaine">Une semaine</option>
-                    <option value="Deux semaines">Deux semaines</option>
-                    <option value="Un mois">Un mois</option>
+                    <option value="Une semaine" {% if inputs.duration == "Une semaine" %} selected {% endif %}>
+                        Une semaine
+                    </option>
+                    <option value="Deux semaines" {% if inputs.duration == "Deux semaines" %} selected {% endif %}>
+                        Deux semaines
+                    </option>
+                    <option value="Un mois" {% if inputs.duration == "Un mois" %} selected {% endif %}>
+                        Un mois
+                    </option>
                 </select>
                 <br>
                 <select name="network" id="network">
                     <option value="">Votre belle-mère pourra-t-elle vous contacter ?</option>
-                    <option value="oui">Oui, soyons raisonnable</option>
-                    <option value="non">Surtout pas !</option>
+                    <option value="oui" {% if inputs.network == "oui" %} selected {% endif %}>
+                        Oui, soyons raisonnable
+                    </option>
+                    <option value="non" {% if inputs.network == "non" %} selected {% endif %}>Surtout pas !</option>
                 </select>
                 <br>
                 <button type="submit">Rechercher</button>
@@ -36,16 +48,20 @@
         </div>
         <div class="all-trips-container">
             {% if trips %}
-                <h3 class="result-title">Vous pouvez envoyer votre belle-mère pour une durée de {{ inputs.duration }}
+            <div class="away-trips-container">
+                <h3 class="away-trips-result-title">Vous pouvez envoyer votre belle-mère pour une durée
+                    de {{ inputs.duration }}
                     vers les destinations suivantes. Elle ne pourra pas vous contacter !</h3>
-            {% endif %}
-            {% for trip in trips %}
-            <div class="trip-container">
-                <img src="{{ trip.image }}" class="trip-image" alt="">
-                {{ trip.trip_name }}
-                {{ trip.id }}
+                {% endif %}
+                {% for trip in trips %}
+                    <img src="{{ trip.image }}" class="trip-image" alt="">
+                    <div class="trip-name-select">
+                        <h4 class="trip-destination away-trip-destination">{{ trip.trip_name }}</h4>
+                        <p class="link-select-container"><a href="purchaseConfirmation?id={{ trip.id }}" class="awaySelectTrip">Sélectionner ce
+                            voyage</a></p>
+                    </div>
                 {% else %}
-                    <h3>{{ noTrip }}</h3>
+                    <h3 class="no-trip">{{ noTrip }}</h3>
                 {% endfor %}
             </div>
         </div>
