@@ -21,4 +21,5 @@ return [
     'HomePage' => ['UserConnectionController', 'showUserHomePage'],
     'modifyUser' => ['ModifyUserProfilController', 'modifyUserInfos'],
     'logout' => ['UserConnectionController', 'logout'],
+    'purchaseConfirmation' => ['purchaseConfirmationController','showUserPurchase', ['id']],
 ];
