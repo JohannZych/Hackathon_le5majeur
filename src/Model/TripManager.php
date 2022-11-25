@@ -2,6 +2,8 @@
 
 namespace App\Model;
 
+use PDO;
+
 class TripManager extends AbstractManager
 {
     public const TABLE = 'trip';
