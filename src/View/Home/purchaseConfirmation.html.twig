@@ -8,7 +8,7 @@
             <img class="purchase-image" src="{{ travel.image }}" alt="travelImage">
         </div>
 
-        <div>
+        <div class="purchase-details-container{{ travel.category }}">
             <span class="purchase-description-resume">resumé : </span><br>
             <p class="purchase-description">
                 Destination : <span class="important-info-purchase">{{ travel.trip_name }}</span> <br>
@@ -18,10 +18,14 @@
                 couverture Reseau : <span class="important-info-purchase">{{ travel.network_coverage }} </span><br>
                 distance : <span class="important-info-purchase">{{ travel.distance }}</span>
             </p>
-            <div class="purchase-button{{ travel.category }}">
-                <a class="purchase-link">Valider</a>
-            </div>
+            <form action="" method="post">
+                <label class="purchase-email-label" for="stepmomEmail">
+                    Veuillez enter l'email de votre belle-mère à qui vous souhaitez offrir ce voayge
+                </label><br>
+                <input class="purchase-email-input" type="email" name="stepmomEmail" id="stepmomEmail"><br>
+                <input type="hidden" name="travelId" value="{{ travel.id }}">
+                <input class="purchase-button{{ travel.category }}" type="submit" value="Valider">
+            </form>
         </div>
-
     </div>
 </div>
