@@ -1,7 +1,15 @@
-<link rel="stylesheet" href="assets/css/purchaseConfirmation.css">
-<link rel="stylesheet" href="assets/css/style.css">
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="assets/css/purchaseConfirmation.css">
+{% endblock %}
+{% block header %}
+{% include "navbar/navbar-log.html.twig" %}
+{% endblock %}
+
+{% block content %}
 <div class="purchase-description-container{{ travel.category }}">
-    <h2 class="purchase-title">Description</h2>
+    <h2 class="purchase-title">Description de votre commande</h2>
     <div class="purchase-container">
 
         <div class="purchase-image-container">
@@ -9,18 +17,18 @@
         </div>
 
         <div class="purchase-details-container{{ travel.category }}">
-            <span class="purchase-description-resume">resumé : </span><br>
+            <span class="purchase-description-resume">Résumé : </span><br>
             <p class="purchase-description">
                 Destination : <span class="important-info-purchase">{{ travel.trip_name }}</span> <br>
                 Continent : <span class="important-info-purchase">{{ travel.continent }}</span> <br>
-                type : <span class="important-info-purchase">{{ travel.type }}</span> <br>
-                pour : <span class="important-info-purchase">{{ travel.duration }}</span> <br>
-                couverture Reseau : <span class="important-info-purchase">{{ travel.network_coverage }} </span><br>
-                distance : <span class="important-info-purchase">{{ travel.distance }}</span>
+                Type : <span class="important-info-purchase">{{ travel.type }}</span> <br>
+                Pour telle durée : <span class="important-info-purchase">{{ travel.duration }}</span> <br>
+                Couverture réseau : <span class="important-info-purchase">{{ travel.network_coverage }} </span><br>
+                Distance : <span class="important-info-purchase">{{ travel.distance }}</span>
             </p>
             <form action="validateTripSelection" method="post">
                 <label class="purchase-email-label" for="stepmomEmail">
-                    Veuillez enter l'email de votre belle-mère à qui vous souhaitez offrir ce voayge
+                    Veuillez enter l'email de votre belle-mère à qui vous souhaitez offrir ce voyage
                 </label><br>
                 <input class="purchase-email-input" type="email" name="stepmomEmail" id="stepmomEmail"><br>
                 <input type="hidden" name="travelId" value="{{ travel.id }}">
@@ -29,3 +37,4 @@
         </div>
     </div>
 </div>
+{% endblock %}
