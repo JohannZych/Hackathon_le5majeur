@@ -36,9 +36,10 @@ class MailerModel
      */
     public function sendTravelConfirmation($email)
     {
+//        $travelId = $_POST['travelId'];
         $mail = $this->createMailer();
-        //$travelModel = new TripManager();
-//        $travel = $travelModel->
+//        $travelModel = new TripManager();
+//        $travel = $travelModel->getTripById($travelId);
         try {
             $mail->addAddress("$email");
             $mail->Subject = 'Un cadeau de la part de ...';
@@ -46,13 +47,14 @@ class MailerModel
 <head>
 <style>
 body * {width: 100%}
-.email-title {text-align: center; margin: 16px}
+.email-title {text-align: center; margin: 16px; margin-bottom: 24px}
 .email-text {font-family: Verdana, sans-serif; }
 </style>
 </head>
 <body>
-<h1 class='email-title'>Vous avez reçu un cadeau de la part</h1>
-<h3 class='email-text'></h3>
+<h1 class='email-title'>Vous avez reçu un cadeau</h1>
+<h3 class='email-text'>Vous aller partir en voyage, j'espère que celui-ci vous plaira !</h3>
+<img alt='billet d`avion' src='https://previews.123rf.com/images/orelphoto/orelphoto1404/orelphoto140400062/27788700-variante-du-billet-d-avion-isol%C3%A9-sur-blanc-illustration.jpg'>
 </body>
 </html>";
             $mail->Body = $text;
